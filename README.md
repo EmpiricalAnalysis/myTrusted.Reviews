@@ -9,11 +9,9 @@ From Amazon.com between 1996 and 2014, containing 83 million reviews, 9 million 
 If user A endorses user B and user E's reviews, then user B and user E are user A's first-degree trusted reviewers. Further, if user B endorses user C and user D's reviews, then user C and user D are user A's second-degree trusted reviewers.
 
 ## Pipeline
-Data in flat files were first loaded into S3 via shell script. Spark then reads data from S3, generates product-reviewer table and the user-trusted reviewer relations tables, and writes results directly into Elasticsearch. Flask was used to build an interactive website to process user queries. 
+Data in flat files were first loaded into S3 via shell script. Spark then reads data from S3, generates the product-reviewer table and the user-trusted reviewer relations tables, and writes results directly into Elasticsearch. Flask was used to build an interactive website to process user queries. 
 ![project pipeline](https://github.com/EmpiricalAnalysis/myTrusted.Reviews/blob/master/extra/pipeline.jpeg "Pipeline")
 
 
 ## Acknowledgment
-Ups and downs: Modeling the visual evolution of fashion trends with one-class collaborative filtering
-R. He, J. McAuley
-WWW, 2016
+The data used to power this platform came from "Ups and downs: Modeling the visual evolution of fashion trends with one-class collaborative filtering" by R. He, J. McAuley, WWW, 2016
