@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='my_style.css') }}">
+  </head>
+  <body>
+    <h1>Results for your <span style="color: red"><em> {{ item_keyword }}</em></span> search:</h1>
+
+    <table class="table" style="width: 80%">
+      <thead>
+        <tr>
+          <th style="text-align: center;">Title</th>
+          <th style="text-align: center;">Brand</th>
+          <th style="text-align: center;">Price ($)</th>
+          <th style="text-align: center;">Item ID</th>
+          <th style="text-align: center;">Description</th>
+          <th style="text-align: center;" class="nReviewerCol">Num of Your 1st Deg Reviewers</th>
+          <th style="text-align: center;" class="nReviewerCol">Num of Your 2nd Deg Reviewers</th>
+          <th style="text-align: center;">Image</th>
+        </tr>
+      </thead>
+      {% for a in reviews %}
+        <tr>
+            <td>{{a['title']}}</td>
+            <td>{{a['brand']}}</td> 
+            <td>{{a['price']}}</td>
+            <td>{{a['asin']}}</td>
+            <td>{{a['description']}}</td>
+            <td><a href="{{ url_for('review', itemID=a['asin'], reviewerIDs_str=a['relevant1DReviewers'], nReviews=a['n1DReviewer'], level="FIRST") }}">{{a['n1DReviewer']}}</a></td>
+            <td><a href="{{ url_for('review', itemID=a['asin'], reviewerIDs_str=a['relevant2DReviewers'], nReviews=a['n1DReviewer'], level="SECOND") }}">{{a['n2DReviewer']}}</a></td>
+            <td><img src={{a['imUrl']}}></td>
+        </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
+
+

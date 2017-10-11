@@ -1,0 +1,37 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h3>Search for a product</h3>
+        </div>
+        <div class="row" style="margin-top:20px">
+            <div class="col-md-12">
+                <form role="form" action="" method="POST">
+                    <div class="form-group">
+                        <label for="title">Search</label>
+                        <input class="form-control" name="item_keyword" placeholder="Product Keywords">
+                    </div>
+                    <div class="form-group">
+                        <label for="author">UserID (optional)</label>
+                        <select class="form-control" name="userID">
+                            <option value="1">New User</option>
+                            <option value="A1EVGV2GA8BUWP">A1EVGV2GA8BUWP</option>
+                            <option value="A12KEL5EPKC2KH">A12KEL5EPKC2KH</option>
+                            <option value="A1CMLFVZ03TPHZ">A1CMLFVZ03TPHZ</option>
+                            <option value="A1R8TL0ECQA6VL">A1R8TL0ECQA6VL</option>
+                            <option value="A1UATEPGNZJ3AH">A1UATEPGNZJ3AH</option>
+                            <option value="A3W2NP5ZP6NQME">A3W2NP5ZP6NQME</option>
+                            <option value="A1L12BBB6AASBK">A1L12BBB6AASBK</option>  
+                        </select>
+                    </div>
+                    <button type="submit" name='submit' class="btn btn-default" value="Form has been sent!">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

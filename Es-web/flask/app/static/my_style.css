@@ -1,0 +1,40 @@
+html
+{
+   font-size: 1.05em !important;
+   color: #000 !important;
+}
+
+body
+{
+    width: 100%;
+    font-size: 0.8em;
+    margin-left: -3em;
+}
+
+img
+{
+    width: 160%;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 2em auto 1em auto;
+    text-align: center;
+}
+
+table {
+    width: 85%;
+    margin: auto;
+    font-size: 0.95em;
+    text-align: center;
+}
+
+.nReviewerCol {
+	color: #FF8000;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 2em auto 1em auto;
+    text-align: center;
+}
