@@ -14,4 +14,4 @@ Data in flat files were first loaded into S3 via shell script. Spark then reads 
 
 
 ## Acknowledgment
-The data used to power this platform came from "Ups and downs: Modeling the visual evolution of fashion trends with one-class collaborative filtering" by R. He, J. McAuley, WWW, 2016
+The data used to power this platform were courtesy of Julian McAuley of UCSD. 
